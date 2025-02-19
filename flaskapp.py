@@ -6,7 +6,7 @@ app = Flask(_name_)
 
 # SQLite setup
 BASE_DIR = os.path.dirname(os.path.abspath(_file_))  # Get the absolute directory
-db_path = os.path.join(BASE_DIR, 'users.db')
+db_path = os.path.join(BASE_DIR, 'mydatabase.db')
 
 conn = sqlite3.connect(db_path) #"/flaskapp/users.db
 c = conn.cursor()
