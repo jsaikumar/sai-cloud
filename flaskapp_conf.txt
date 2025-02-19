@@ -1,0 +1,14 @@
+
+<VirtualHost *:80>
+    ServerName ec2-3-140-254-152.us-east-2.compute.amazonaws.com
+    WSGIScriptAlias / /home/ubuntu/flaskapp/flaskapp.wsgi
+    <Directory /home/ubuntu/flaskapp/>
+        Require all granted
+    </Directory>
+    Alias /static /home/ubuntu/flaskapp/static
+    <Directory /home/ubuntu/flaskapp/static/>
+        Require all granted
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
